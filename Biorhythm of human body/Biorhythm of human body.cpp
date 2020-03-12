@@ -3,7 +3,7 @@
 #include <string.h>
 int main()
 {
-    char szTest[1000] = {0};
+    char ch;
     int num;
     int year1,month1,day1,year2,month2,day2;
 	int year,month,day,leap;
@@ -30,9 +30,8 @@ int main()
             while(!feof(fp))
             //读取txt文件
             {
-                memset(szTest,0, sizeof(szTest));
-                fgets(szTest,sizeof(szTest) - 1, fp);
-                printf("%s",szTest);
+                ch=fgetc(fp);
+                printf("%c",ch);
             }
             fclose(fp);
             printf("\n"); 
